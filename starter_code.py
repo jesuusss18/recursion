@@ -250,19 +250,20 @@ if __name__ == "__main__":
     print("Total Infected Files (breached files):", len(find_infected_files("breach_data"))) # ???
 
     ## 5. Determine how many files were corrupted by department (Finance, HR, and Sales)
+    print("Departments in breach_data:", os.listdir("breach_data"))
 
     finance_infected = "breach_data/Finance"
     hr_infected = "breach_data/HR"
     sales_infected = "breach_data/Sales"
     
-    finance_infected = len(find_infected_files(finance_infected))
-    hr_infected = len(find_infected_files(hr_infected))
-    sales_infected = len(find_infected_files(sales_infected))
+    finance_count = len(find_infected_files(finance_infected))
+    hr_count = len(find_infected_files(hr_infected))
+    sales_count = len(find_infected_files(sales_infected))
 
     print("Number of infected files by department")
-    print(f"Finance : {finance_infected}")
-    print(f"HR : {hr_infected}")
-    print(f"Sales : {sales_infected}")
+    print(f"Finance : {finance_count}")
+    print(f"HR : {hr_count}")
+    print(f"Sales : {sales_count}")
 
 
 
